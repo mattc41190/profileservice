@@ -42,13 +42,13 @@ func MakeHTTPHandler(s Service, logger log.Logger) http.Handler {
 	// Create Gorilla Mux Handlers For Each Endpoint
 	// TODO: Decompose one of these guys method by method
 	r.Methods("POST").Path("/profiles/").Handler(httptransport.NewServer(
-		epoints.PostAddressEndpoint,
+		epoints.PostProfileEndpoint,
 		decReqPostProfile,
 		encodeResponse,
 		options...,
 	))
 	r.Methods("GET").Path("/profiles/{profileID}").Handler(httptransport.NewServer(
-		epoints.GetAddressEndpoint,
+		epoints.GetProfileEndpoint,
 		decReqGetProfile,
 		encodeResponse,
 		options...,
@@ -125,7 +125,6 @@ func decReqPostProfile(ctx context.Context, request *http.Request) (interface{},
 		// Return a nil value for the decoded request
 		return nil, err
 	}
-
 	// Return the value of type postProfileRequest (populated with the decoded JSON from the HTTP request), and `nil` error value to the caller.
 	return req, nil
 }

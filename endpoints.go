@@ -300,6 +300,7 @@ func MakeGetProfileEndpoint(s Service) endpoint.Endpoint {
 	// TODO: Create detailed ref spec
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(getProfileRequest)
+
 		p, e := s.GetProfile(ctx, req.ProfileID)
 		return getProfileResponse{Profile: p, Err: e}, nil
 	}
