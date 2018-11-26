@@ -1,0 +1,14 @@
+{
+    "id": "002",
+    "name": "Margaret Hill",
+    "Addresses": [
+        {
+            "id": "002A",
+            "location": "84 Rainey Street, Arlen, TX"
+        },
+        {
+            "id": "002B",
+            "location": "8000 Tom Landry Street, Arlen, TX"
+        }
+    ]
+}

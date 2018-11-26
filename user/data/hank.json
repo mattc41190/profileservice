@@ -1,0 +1,14 @@
+{
+    "id": "001",
+    "name": "Henry Hill",
+    "addresses": [
+        {
+            "id": "001A",
+            "location": "84 Rainey Street, Arlen, TX"
+        },
+        {
+            "id": "001B",
+            "location": "212 Propane Drive, Arlen, TX"
+        }
+    ]
+}
